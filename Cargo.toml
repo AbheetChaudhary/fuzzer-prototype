@@ -1,0 +1,19 @@
+[package]
+name = "riscv-emulator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+derive-try-from-primitive = "1.0.0"
+derive_more = "0.99.17"
+enumflags2 = "0.6.4"
+mmap = "0.1.1"
+nom = "5.1.2"
+region = "2.2.0"
+
+[profile.release]
+codegen_units = 1
+lto = "fat"
+panic = "abort"
